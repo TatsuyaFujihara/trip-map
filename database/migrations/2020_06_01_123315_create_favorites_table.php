@@ -13,12 +13,12 @@ class CreateFavoritesTable extends Migration
      */
     public function up()
     {
-        Schema::create('favorites', function (Blueprint $table) {
-            $table->id();
-            $table->unsignedBigInteger('user_id');
-            $table->unsignedBigInteger('trip_id');
-            $table->timestamps();
-        });
+        // Schema::create('favorites', function (Blueprint $table) {
+        //     $table->id();
+        //     $table->unsignedBigInteger('user_id');
+        //     $table->unsignedBigInteger('trip_id');
+        //     $table->timestamps();
+        // });
     }
 
     /**

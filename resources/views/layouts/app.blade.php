@@ -4,6 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    {{-- image css --}}
+    <link rel="stylesheet" href="{{ asset('css/image.css') }}">
+
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -11,13 +14,18 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/common.js') }}" defer></script>
+    <script src="{{ asset('js/map.js') }}" defer></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    
 </head>
 <body>
     <div id="app">
@@ -34,17 +42,17 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                            <a class="nav-link text-white-50 h5 my-auto mx-3" href="#">
+                            <a href="/trip" class="nav-link text-white-50 h5 my-auto mx-3" href="#">
                                  ホーム 
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white-50 h5 my-auto mx-3" href="#">
+                            <a href="/trip/post" class="nav-link text-white-50 h5 my-auto mx-3" href="#">
                                  新規投稿 
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white-50 h5 my-auto mx-3" href="#">
+                            <a href="/trip/mypage" class="nav-link text-white-50 h5 my-auto mx-3" href="#">
                                   マイページ
                             </a>
                         </li>

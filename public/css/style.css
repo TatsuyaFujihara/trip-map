@@ -1,0 +1,295 @@
+@charset "utf-8";
+
+    /* ホーム画面 */
+/* スポット・ジャンルで絞る　イメージサイズ　*/
+.genre-img {
+    width: 100%;
+    height: 90%;
+    margin: auto;
+    object-fit: cover;
+}
+
+/* みんなの投稿 タイトルとタグ*/
+.title-box {
+    display: -webkit-box;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+/* みんなの投稿 aタグ*/
+.Everyone {
+    width: 1200px;
+    margin: 0;
+    padding: 0;
+    color: #00a0d0;
+    font-size: 1.5rem;
+    font-weight: normal;
+    line-height: 1.2857em;
+    text-align: right;
+    text-decoration: none;
+}
+
+/* みんなの投稿 and ランキングのイメージボックス*/
+.square-row-img {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+/* みんなの投稿 and ランキングのイメージボックス*/
+.square-row-img li{
+    position: relative;
+    width: 25%;
+    
+}
+
+/* みんなの投稿 and ランキングのイメージボックス*/
+.square-row-img li:before{
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+
+/* みんなの投稿 and ランキングのイメージボックス　各写真*/
+.square-row-img img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    object-fit: cover;
+    border-radius: 0%;
+}
+
+
+    /* 絞り込み画面 */
+/* 絞り込み画面　ジャンル選択 */
+#search {
+    width: 100%;
+}
+  
+  .searchicon {
+    color: #5cb85c;
+}
+  
+  .items-collection {
+    margin: 20px 0 0 0;
+}
+  .items-collection label.btn-default.active {
+    background-color: #007ba7;
+    color: #fff;
+}
+  .items-collection label.btn-default {
+    width: 90%;
+    border: 1px solid #305891;
+    margin: 5px;
+    border-radius: 17px;
+    color: #305891;
+}
+  .items-collection label .itemcontent {
+    width: 100%;
+}
+  .items-collection .btn-group {
+    width: 90%;
+}
+  
+/* ●絞込み画面●　日本地図 画像サイズ　*/
+.japan-img {
+    width: 90%;
+    height: 90%;
+    margin: auto;
+    object-fit: cover;
+}
+
+/* ●絞込み画面●　投稿一覧 画像サイズ　*/
+.post-img {
+    width: 600px;
+    height: 250px;
+    margin: auto;
+    object-fit: cover;
+}
+
+/* ●新規投稿画面●　写真投稿　画像サイズ　*/
+.picture-img {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    object-fit: cover;
+}
+
+/* ●マイページ　過去の投稿●　画像サイズ　*/
+.last-post {
+    width: 90%;
+    height:180;
+    margin: auto;
+    object-fit: cover;
+}
+
+/*  マイページのマップ */
+table#clickable_map {
+	border-collapse: separate;
+	border-style: solid;
+	border-width: 0px;
+	background-color: #fff;
+}
+#clickable_map td {
+	margin: 0;
+	padding: 0;
+	color: #000000;
+	border-style: none;
+	border-width: 1px;
+	border-color: #fff;
+	background-color: #fff;
+	width: 45px;
+	height: 24px;
+	line-height: 16px;
+	vertical-align: middle;
+}
+td#hokkaido {
+	width: 91px;
+	height: 49px;
+}
+td.colspan_2	{ width: 91px !important; }
+#clickable_map a {
+	text-decoration: none;
+	display: block;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	margin: 0;
+	padding: 1px 0;
+	font-size: 14px;
+}
+#clickable_map a:link { color: #2128e0; font-weight: normal; }
+#clickable_map a:visited { color: #2128e0; font-weight: normal; }
+#clickable_map a:hover { color: #fff; font-weight: normal; background-color: orange; }
+#clickable_map a:active { color: #fff; font-weight: normal; background-color: gold; }
+a.hokkaido	{ background-color: #a0a0ff; }
+a.touhoku	{ background-color: #a0d0ff; }
+a.kantou	{ background-color: #9ef7d5; }
+a.chubu		{ background-color: #c0ff80; }
+a.kinki		{ background-color: #f3f972; }
+a.chugoku	{ background-color: #ffc080; }
+a.shikoku	{ background-color: #ffc0c0; }
+a.kyushu	{ background-color: #ffc0ff; }
+a.not_go	{ background-color: #c4c3c4; }
+
+/* ジャンル・スポット絞り込み　地図関係 */
+/* 日本地図DOM */
+.japan_map{
+    position: relative;
+    box-sizing: border-box;
+    margin: 0 auto;
+    display: table;
+    background-color: #adf6ff;
+}
+/* 日本地図画像（スマホ対応用） */
+.japan_map img{
+    max-width: 100%;
+    height: auto;
+    border: 0;
+    -webkit-backface-visibility: hidden;
+}
+/* 日本地図ボタン */
+.japan_map .area_btn{
+    position: absolute;
+    z-index: 1;
+    box-sizing: border-box;
+    cursor: pointer;
+    border: 3px solid #333333;
+    border-radius: 5px;
+    background-color: #FFF;
+    padding: 0.2em auto;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* ボタン配置（使用する日本地図画像により微調整） */
+.japan_map .area_btn.area1{
+    top: 30%;
+    right: 0;
+    width: 30%;
+}
+.japan_map .area_btn.area2{
+    top: 58%;
+    right: 11%;
+    width: 13%;
+}
+.japan_map .area_btn.area3{
+    top: 56%;
+    right: 27.5%;
+    width: 13%;
+}
+.japan_map .area_btn.area4{
+    top: 65%;
+    right: 44%;
+    width: 13%;
+}
+.japan_map .area_btn.area5{
+    top: 52%;
+    left: 20%;
+    width: 25%;
+}
+.japan_map .area_btn.area6{
+    top: 70%;
+    left: 0;
+    width: 25%;
+}
+/* オーバーレイ */
+.japan_map .area_overlay{
+    display: none;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    background-color: #111;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+/* 選択前は表示を隠す */
+.japan_map .pref_area{
+    /* display: none; */
+}
+
+/* 地域毎の都道府県リスト */
+.japan_map .pref_list{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    z-index: 3;
+    box-sizing: border-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: 90%;
+    background-color: #FFF;
+}
+.japan_map .pref_list > div{
+    box-sizing: border-box;
+    width: 50%;
+    border: 1px solid #CCC;
+    font-weight: bold;
+    text-align: center;
+    padding: 0.5em;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 480px){
+    /* スマホユーザー向けにボタン文字サイズを調整 */
+    .japan_map .area_btn{
+        font-size: 4vw;
+    }
+}
