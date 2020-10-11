@@ -144,7 +144,6 @@ class TripController extends Controller
         ]);
         // $file = $request->file('image')->store('trip_images');
         $image = $request->file('image');
-        dd($image);
         $path = Storage::disk('s3')->putFile('tripimagebox', $image, 'public');
         Tripimage::create([
             'trip_id' => $trip->id,
