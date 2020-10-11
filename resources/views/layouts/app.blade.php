@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     {{-- image css --}}
-    <link rel="stylesheet" href="{{ asset('css/image.css') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('css/image.css') }}"> --}}
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
