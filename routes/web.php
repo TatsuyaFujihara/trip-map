@@ -34,8 +34,10 @@ Route::group(['middleware' =>['auth']], function (){
   
 // Trip Mapのマイページ
 Route::get('/trip/mypage', 'TripController@mypage');
-Route::get('/trip/allmypost', 'TripController@mypost');
 Route::get('/trip/myfavorite', 'TripController@myfavorite');
+
+// Goneマップの詳細ページ
+Route::get('/trip/mypage/gone', 'TripController@gone');
 
 // Trip Mapの新規投稿画面
 Route::get('/trip/post', 'TripController@post');

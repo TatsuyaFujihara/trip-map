@@ -36,7 +36,7 @@
   {{-- 過去の投稿 --}}
   <div class="title-box mt-5">
     <h3 class="ml-3 mb-3">〜過去の投稿〜</h3>
-    <a href="/trip/allmypost" class="Everyone">過去の投稿を見る></a>
+    <a href="/trip/mypage/gone" class="Everyone">過去の投稿を見る></a>
   </div>
   
   <div class="card-group">
@@ -79,9 +79,7 @@
       <td></td>
       @if (in_array('北海道', $map))
         <td colspan=2 id="hokkaido" class="char3">
-          <a href="" class="hokkaido">北<br>海<br>道
-            <input type="button" name="genre[]" autocomplete="off"/>
-          </a>
+          <a href="/trip/mypage/gone?pref=北海道" class="hokkaido">北<br>海<br>道</a>
         </td>
       @else
         <td colspan=2 id="hokkaido" class="char3"><a class="not_go">北<br>海<br>道</a></td>
@@ -103,7 +101,7 @@
       <td></td>
       <td></td>
       @if (in_array('青森', $map))
-      <td colspan=2 class="colspan_2"><a href=""　class="touhoku">青<br>森</a></td>
+      <td colspan=2 class="colspan_2"><a href="/trip/mypage/gone?pref=青森"　class="touhoku">青<br>森</a></td>
       @else
       <td colspan=2 class="colspan_2"><a class="not_go">青<br>森</a></td>
       @endif
@@ -121,12 +119,12 @@
       <td></td>
       <td></td>
       @if (in_array('秋田', $map))
-      <td colspan=2><a href="" class="touhoku">秋<br>田</a></td>
+      <td colspan=2><a href="/trip/mypage/gone?pref=秋田" class="touhoku">秋<br>田</a></td>
       @else
       <td colspan=2><a class="not_go">秋<br>田</a></td>
       @endif
       @if (in_array('岩手', $map))
-      <td colspan=2><a href="" class="touhoku">岩<br>手</a></td>
+      <td colspan=2><a href="/trip/mypage/gone?pref=岩手" class="touhoku">岩<br>手</a></td>
       @else
       <td colspan=2><a class="not_go">岩<br>手</a></td>
       @endif
@@ -140,7 +138,7 @@
       <td></td>
       <td></td>
       @if (in_array('石川', $map))
-      <td rowspan=2 class="rowspan_2"><a href="" class="chubu">石<br>川</a></td>
+      <td rowspan=2 class="rowspan_2"><a href="/trip/mypage/gone?pref=石川" class="chubu">石<br>川</a></td>
       @else
       <td rowspan=2 class="rowspan_2"><a class="not_go">石<br>川</a></td>
       @endif
@@ -148,19 +146,19 @@
       <td></td>
       <td></td>
       @if (in_array('山形', $map))
-      <td colspan=2 class="colspan_2"><a href="" class="touhoku">山<br>形</a></td>
+      <td colspan=2 class="colspan_2"><a href="/trip/mypage/gone?pref=山形" class="touhoku">山<br>形</a></td>
       @else
       <td colspan=2 class="colspan_2"><a class="not_go">山<br>形</a></td>
       @endif
       @if (in_array('宮城', $map))
-      <td colspan=2 class="colspan_2"><a href="" class="touhoku">宮<br>城</a></td>
+      <td colspan=2 class="colspan_2"><a href="/trip/mypage/gone?pref=宮城" class="touhoku">宮<br>城</a></td>
       @else
       <td colspan=2 class="colspan_2"><a class="not_go">宮<br>城</a></td>
       @endif
     </tr>
     <tr>
       @if (in_array('沖縄', $map))
-      <td><a href="" class="kyushu">沖<br>縄</a></td>
+      <td><a href="/trip/mypage/gone?pref=沖縄" class="kyushu">沖<br>縄</a></td>
       @else
       <td><a class="not_go">沖<br>縄</a></td>
       @endif
@@ -171,17 +169,17 @@
       <td></td>
       <td></td>
       @if (in_array('富山', $map))
-      <td><a href="" class="chubu">富<br>山</a></td>
+      <td><a href="/trip/mypage/gone?pref=富山" class="chubu">富<br>山</a></td>
       @else
       <td><a class="not_go">富<br>山</a></td>
       @endif
       @if (in_array('新潟', $map))
-      <td colspan=2 class="colspan_2"><a href="" class="chubu">新<br>潟</a></td>
+      <td colspan=2 class="colspan_2"><a href="/trip/mypage/gone?pref=新潟" class="chubu">新<br>潟</a></td>
       @else
       <td colspan=2 class="colspan_2"><a class="not_go">新<br>潟</a></td>
       @endif
       @if (in_array('福島', $map))
-      <td colspan=2 class="colspan_2"><a href="" class="touhoku">福<br>島</a></td>
+      <td colspan=2 class="colspan_2"><a href="/trip/mypage/gone?pref=福島" class="touhoku">福<br>島</a></td>
       @else
       <td colspan=2 class="colspan_2"><a class="not_go">福<br>島</a></td>
       @endif
@@ -195,32 +193,32 @@
       <td></td>
       <td></td>
       @if (in_array('福井', $map))
-      <td><a href="" class="chubu">福<br>井</a></td>
+      <td><a href="/trip/mypage/gone?pref=福井" class="chubu">福<br>井</a></td>
       @else
       <td><a class="not_go">福<br>井</a></td>
       @endif
       @if (in_array('岐阜', $map))
-      <td rowspan=2 class="rowspan_2"><a href="" class="chubu">岐<br>阜</a></td>
+      <td rowspan=2 class="rowspan_2"><a href="/trip/mypage/gone?pref=岐阜" class="chubu">岐<br>阜</a></td>
       @else
       <td rowspan=2 class="rowspan_2"><a class="not_go">岐<br>阜</a></td>
       @endif
       @if (in_array('長野', $map))
-      <td rowspan=2 class="rowspan_2"><a href="" class="chubu">長<br>野</a></td>
+      <td rowspan=2 class="rowspan_2"><a href="/trip/mypage/gone?pref=長野" class="chubu">長<br>野</a></td>
       @else
       <td rowspan=2 class="rowspan_2"><a class="not_go">長<br>野</a></td>
       @endif
       @if (in_array('群馬', $map))
-      <td><a href="" class="kantou">群<br>馬</a></td>
+      <td><a href="/trip/mypage/gone?pref=群馬" class="kantou">群<br>馬</a></td>
       @else
       <td><a class="not_go">群<br>馬</a></td>
       @endif
       @if (in_array('栃木', $map))
-      <td><a href="" class="kantou">栃<br>木</a></td>
+      <td><a href="/trip/mypage/gone?pref=栃木" class="kantou">栃<br>木</a></td>
       @else
       <td><a class="not_go">栃<br>木</a></td>
       @endif
       @if (in_array('茨城', $map))
-      <td><a href="" class="kantou">茨<br>城</a></td>
+      <td><a href="/trip/mypage/gone?pref=茨城" class="kantou">茨<br>城</a></td>
       @else
       <td><a class="not_go">茨<br>城</a></td>
       @endif
@@ -230,111 +228,111 @@
       <td></td>
       <td></td>
       @if (in_array('島根', $map))
-      <td><a href="" class="chugoku">島<br>根</a></td>
+      <td><a href="/trip/mypage/gone?pref=島根" class="chugoku">島<br>根</a></td>
       @else
       <td><a class="not_go">島<br>根</a></td>
       @endif
       @if (in_array('鳥取', $map))
-      <td><a href="" class="chugoku">鳥<br>取</a></td>
+      <td><a href="/trip/mypage/gone?pref=鳥取" class="chugoku">鳥<br>取</a></td>
       @else
       <td><a class="not_go">鳥<br>取</a></td>
       @endif
       @if (in_array('兵庫', $map))
-      <td rowspan=2 class="rowspan_2"><a href="" class="kinki">兵<br>庫</a></td>
+      <td rowspan=2 class="rowspan_2"><a href="/trip/mypage/gone?pref=兵庫" class="kinki">兵<br>庫</a></td>
       @else
       <td rowspan=2 class="rowspan_2"><a class="not_go">兵<br>庫</a></td>
       @endif
       @if (in_array('京都', $map))
-      <td><a href="" class="kinki">京<br>都</a></td>
+      <td><a href="/trip/mypage/gone?pref=京都" class="kinki">京<br>都</a></td>
       @else
       <td><a class="not_go">京<br>都</a></td>
       @endif
       @if (in_array('滋賀', $map))
-      <td><a href="" class="kinki">滋<br>賀</a></td>
+      <td><a href="/trip/mypage/gone?pref=滋賀" class="kinki">滋<br>賀</a></td>
       @else
       <td><a class="not_go">滋<br>賀</a></td>
       @endif
       @if (in_array('山梨', $map))
-      <td><a href="" class="chubu">山<br>梨</a></td>
+      <td><a href="/trip/mypage/gone?pref=山梨" class="chubu">山<br>梨</a></td>
       @else
       <td><a class="not_go">山<br>梨</a></td>
       @endif
       @if (in_array('埼玉', $map))
-      <td><a href="" class="kantou">埼<br>玉</a></td>
+      <td><a href="/trip/mypage/gone?pref=埼玉" class="kantou">埼<br>玉</a></td>
       @else
       <td><a class="not_go">埼<br>玉</a></td>
       @endif
       @if (in_array('千葉', $map))
-      <td rowspan=2 class="rowspan_2"><a href="" class="kantou">千<br>葉</a></td>
+      <td rowspan=2 class="rowspan_2"><a href="/trip/mypage/gone?pref=千葉" class="kantou">千<br>葉</a></td>
       @else
       <td rowspan=2 class="rowspan_2"><a class="not_go">千<br>葉</a></td>
       @endif
     </tr>
     <tr>
       @if (in_array('佐賀', $map))
-      <td><a href="" class="kyushu">佐<br>賀</a></td>
+      <td><a href="/trip/mypage/gone?pref=佐賀" class="kyushu">佐<br>賀</a></td>
       @else
       <td><a class="not_go">佐<br>賀</a></td>
       @endif
       @if (in_array('福岡', $map))
-      <td><a href="" class="kyushu">福<br>岡</a></td>
+      <td><a href="/trip/mypage/gone?pref=福岡" class="kyushu">福<br>岡</a></td>
       @else
       <td><a class="not_go">福<br>岡</a></td>
       @endif
       @if (in_array('山口', $map))
-      <td><a href="" class="chugoku">山<br>口</a></td>
+      <td><a href="/trip/mypage/gone?pref=山口" class="chugoku">山<br>口</a></td>
       @else
       <td><a class="not_go">山<br>口</a></td>
       @endif
       @if (in_array('広島', $map))
-      <td><a href="" class="chugoku">広<br>島</a></td>
+      <td><a href="/trip/mypage/gone?pref=広島" class="chugoku">広<br>島</a></td>
       @else
       <td><a class="not_go">広<br>島</a></td>
       @endif
       @if (in_array('岡山', $map))
-      <td><a href="" class="chugoku">岡<br>山</a></td>
+      <td><a href="/trip/mypage/gone?pref=岡山" class="chugoku">岡<br>山</a></td>
       @else
       <td><a class="not_go">岡<br>山</a></td>
       @endif
       @if (in_array('大阪', $map))
-      <td><a href="" class="kinki">大<br>阪</a></td>
+      <td><a href="/trip/mypage/gone?pref=大阪" class="kinki">大<br>阪</a></td>
       @else
       <td><a class="not_go">大<br>阪</a></td>
       @endif
       @if (in_array('奈良', $map))
-      <td><a href="" class="kinki">奈<br>良</a></td>
+      <td><a href="/trip/mypage/gone?pref=奈良" class="kinki">奈<br>良</a></td>
       @else
       <td><a class="not_go">奈<br>良</a></td>
       @endif
       @if (in_array('愛知', $map))
-      <td><a href="" class="chubu">愛<br>知</a></td>
+      <td><a href="/trip/mypage/gone?pref=愛知" class="chubu">愛<br>知</a></td>
       @else
       <td><a class="not_go">愛<br>知</a></td>
       @endif
       @if (in_array('静岡', $map))
-      <td><a href="" class="chubu">静<br>岡</a></td>
+      <td><a href="/trip/mypage/gone?pref=静岡" class="chubu">静<br>岡</a></td>
       @else
       <td><a class="not_go">静<br>岡</a></td>
       @endif
       @if (in_array('神奈川', $map))
-      <td class="char3"><a href="" class="kantou">神<br>奈<br>川</a></td>
+      <td class="char3"><a href="/trip/mypage/gone?pref=神奈川" class="kantou">神<br>奈<br>川</a></td>
       @else
       <td class="char3"><a class="not_go">神<br>奈<br>川</a></td>
       @endif
       @if (in_array('東京', $map))
-      <td><a href="" class="kantou">東<br>京</a></td>
+      <td><a href="/trip/mypage/gone?pref=東京" class="kantou">東<br>京</a></td>
       @else
       <td><a class="not_go">東<br>京</a></td>
       @endif
     </tr>
     <tr>
       @if (in_array('長崎', $map))
-      <td><a href="" class="kyushu">長<br>崎</a></td>
+      <td><a href="/trip/mypage/gone?pref=長崎" class="kyushu">長<br>崎</a></td>
       @else
       <td><a class="not_go">長<br>崎</a></td>
       @endif
       @if (in_array('大分', $map))
-      <td><a href="" class="kyushu">大<br>分</a></td>
+      <td><a href="/trip/mypage/gone?pref=大分" class="kyushu">大<br>分</a></td>
       @else
       <td><a class="not_go">大<br>分</a></td>
       @endif
@@ -343,12 +341,12 @@
       <td></td>
       <td></td>
       @if (in_array('和歌山', $map))
-      <td class="char3"><a href="" class="kinki">和<br>歌<br>山</a></td>
+      <td class="char3"><a href="/trip/mypage/gone?pref=和歌山" class="kinki">和<br>歌<br>山</a></td>
       @else
       <td class="char3"><a class="not_go">和<br>歌<br>山</a></td>
       @endif
       @if (in_array('三重', $map))
-      <td><a href="" class="chubu">三<br>重</a></td>
+      <td><a href="/trip/mypage/gone?pref=三重" class="chubu">三<br>重</a></td>
       @else
       <td><a class="not_go">三<br>重</a></td>
       @endif
@@ -360,23 +358,23 @@
     </tr>
     <tr>
       @if (in_array('熊本', $map))
-      <td><a href="" class="kyushu">熊<br>本</a></td>
+      <td><a href="/trip/mypage/gone?pref=熊本" class="kyushu">熊<br>本</a></td>
       @else
       <td><a class="not_go">熊<br>本</a></td>
       @endif
       @if (in_array('宮崎', $map))
-      <td><a href="" class="kyushu">宮<br>崎</a></td>
+      <td><a href="/trip/mypage/gone?pref=宮崎" class="kyushu">宮<br>崎</a></td>
       @else
       <td><a class="not_go">宮<br>崎</a></td>
       @endif
       <td></td>
       @if (in_array('愛媛', $map))
-      <td><a href="" class="shikoku">愛<br>媛</a></td>
+      <td><a href="/trip/mypage/gone?pref=愛媛" class="shikoku">愛<br>媛</a></td>
       @else
       <td><a class="not_go">愛<br>媛</a></td>
       @endif
       @if (in_array('香川', $map))
-      <td><a href="" class="shikoku">香<br>川</a></td>
+      <td><a href="/trip/mypage/gone?pref=香川" class="shikoku">香<br>川</a></td>
       @else
       <td><a class="not_go">香<br>川</a></td>
       @endif
@@ -391,18 +389,18 @@
     </tr>
     <tr>
       @if (in_array('鹿児島', $map))
-      <td colspan=2 class="colspan_2 char3"><a href="" class="kyushu">鹿<br>児<br>島</a></td>
+      <td colspan=2 class="colspan_2 char3"><a href="/trip/mypage/gone?pref=鹿児島" class="kyushu">鹿<br>児<br>島</a></td>
       @else
       <td colspan=2 class="colspan_2 char3"><a class="not_go">鹿<br>児<br>島</a></td>
       @endif
       <td></td>
       @if (in_array('高知', $map))
-      <td><a href="" class="shikoku">高<br>知</a></td>
+      <td><a href="/trip/mypage/gone?pref=高知" class="shikoku">高<br>知</a></td>
       @else
       <td><a class="not_go">高<br>知</a></td>
       @endif
       @if (in_array('徳島', $map))
-      <td><a href="" class="shikoku">徳<br>島</a></td>
+      <td><a href="/trip/mypage/gone?pref=徳島" class="shikoku">徳<br>島</a></td>
       @else
       <td><a class="not_go">徳<br>島</a></td>
       @endif

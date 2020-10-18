@@ -17,7 +17,9 @@ $(function(){
     //都道府県をクリック
     $('.pref_list [data-id]').click(function(){
         if($(this).data('id')){
-            var id = $(this).data('id');
+            var id = $(this).text();
+            $('[name="pref"]').val(id);
+
             //このidを使用して行いたい操作をしてください
             //都道府県IDに応じて別ページに飛ばしたい場合はこんな風に書く↓
             //window.location.href = 'https://kinocolog.com/pref/' + id;
@@ -33,3 +35,4 @@ $(function(){
         $('.area_overlay').hide();
     }
 });
+

@@ -39,13 +39,9 @@ class TripController extends Controller
         }
 
         // [キーワード] and [ジャンル1 or ジャンル2] and [local]
-        $locals = $request->input('local');
+        $locals = $request->input('pref');
         if ($locals) {
-            $query->where(function($query) use ($locals) {
-                foreach($locals as $local) {
-                    $query->orWhere('locals', '=', $local);
-                }
-            });
+            $query->where('locals', '=', $locals);
         }
 
         // 画像の読み込み
@@ -68,7 +64,7 @@ class TripController extends Controller
             'trips' => $trips,
             'keyword' => $keyword,
             'genres' => $genres ? $genres : [],
-            'locals' => $locals ? $locals : []
+            'locals' => $locals
         ]); 
     }
 
@@ -205,14 +201,19 @@ class TripController extends Controller
             ]);
     }
 
-// 過去の投稿全表示画面
-    public function mypost() {
-        $trips = Trip::get();
+// goneマップの各地の投稿表示
+    public function gone(Request $request) {
+        $pref = $request->pref;
+        $query = Trip::query();
+        if($pref){
+            $query->where('locals', '=', $pref);
+        } 
+        $trips = $query->get();
         foreach($trips as $trip) {
-            $images = Tripimage::where('trip_id', '=', $trip->id)->take(1)->get();
+            $images = Tripimage::where('trip_id', '=', $trip->id)->get();
             $trip->images = $images;
         }
-        return view('trip/mypost' ,[
+        return view('trip/gone' ,[
             'trips' => $trips,
             ]);
     }

@@ -97,13 +97,6 @@
     width: 90%;
 }
   
-/* ●絞込み画面●　日本地図 画像サイズ　*/
-.japan-img {
-    width: 90%;
-    height: 90%;
-    margin: auto;
-    object-fit: cover;
-}
 
 /* ●絞込み画面●　投稿一覧 画像サイズ　*/
 .post-img {
@@ -258,7 +251,7 @@ a.not_go	{ background-color: #c4c3c4; }
 
 /* 選択前は表示を隠す */
 .japan_map .pref_area{
-    /* display: none; */
+    display: none;
 }
 
 /* 地域毎の都道府県リスト */
